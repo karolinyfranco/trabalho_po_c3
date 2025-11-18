@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c597c5af-a862-4f02-a637-7db7f0de1147" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arquivos_entrada/Reserva10000alea.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arquivos_entrada/Reserva10000inv.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arquivos_entrada/Reserva10000ord.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arquivos_entrada/Reserva1000alea.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arquivos_entrada/Reserva1000inv.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arquivos_entrada/Reserva1000ord.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arquivos_entrada/Reserva50000alea.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arquivos_entrada/Reserva50000inv.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arquivos_entrada/Reserva50000ord.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arquivos_entrada/Reserva5000alea.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arquivos_entrada/Reserva5000inv.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arquivos_entrada/Reserva5000ord.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arquivos_entrada/nome.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/Reserva.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ordenacao/Heapsort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ordenacao/Quicksort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ordenacao/QuicksortInsercao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pesquisa/ABB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pesquisa/AVL.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pesquisa/Hashing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/principal/Principal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/Comparador.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/LeitorGravadorArquivo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trabalho_po_c3.iml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="35dAOF6GbRxR9npbf4YN0cxHqaq" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Application.Principal.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "settings.sync"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\luana\Projects_Faesa\trabalho_po_c3\arquivos_entrada" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Principal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="principal.Principal" />
+      <module name="trabalho_po_c3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="principal.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="trabalho_po_c3" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="trabalho_po_c3" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Principal" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c597c5af-a862-4f02-a637-7db7f0de1147" name="Changes" comment="" />
+      <created>1763429542386</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1763429542386</updated>
+    </task>
+    <servers />
+  </component>
+</project>
