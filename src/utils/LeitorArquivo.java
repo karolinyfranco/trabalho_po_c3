@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.ArrayList;
 import model.Reserva;
 
-public class LeitorGravadorArquivo {
+public class LeitorArquivo {
     public ArrayList<Reserva> carregar(String nomeArquivo) throws IOException {
         ArrayList<Reserva> lista = new ArrayList<>();
 
@@ -29,12 +29,7 @@ public class LeitorGravadorArquivo {
         return nomes;
     }
 
-    public void gravar(Reserva[] vetor, String nomeArquivo) throws IOException {
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter(nomeArquivo))) {
-            for (Reserva r : vetor) {
-                bw.write(r.toString());
-                bw.newLine();
-            }
-        }
+    public String extrairNomeArquivo(String caminho) {
+        return caminho.substring(caminho.lastIndexOf("/") + 1);
     }
 }
