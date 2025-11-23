@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import model.Reserva;
 import ordenacao.*;
+import pesquisa.AVL;
 import pesquisa.Hashing;
 import utils.*;
 
@@ -57,8 +58,11 @@ public class Principal {
         // ETAPA 4: ABB (a ser implementada)
         System.out.println("\n[4/6] ABB - A IMPLEMENTAR");
 
-        // ETAPA 5: AVL (a ser implementada)
-        System.out.println("\n[5/6] AVL - A IMPLEMENTAR");
+        // ETAPA 5: AVL
+        System.out.println("\n[5/6] Executando AVL...");
+        for (String arquivo : ARQUIVOS_ENTRADA) {
+            executarAVL(arquivo);
+        }
 
         // ETAPA 6: Hashing
         System.out.println("\n[6/6] Executando Hashing...");
@@ -137,6 +141,41 @@ public class Principal {
             long fim = System.nanoTime();
             tempoTotal += (fim - inicio);
         }
+        double media = tempoTotal / 5.0 / 1_000_000.0;
+        System.out.printf("  %-25s -> %.3f ms%n", nomeArquivo, media);
+    }
+
+    public static void executarAVL(String caminhoArquivo) throws IOException {
+        String nomeArquivo = leitor.extrairNomeArquivo(caminhoArquivo);
+        String nomeSaida = "arquivos_saida/AVL" + nomeArquivo.substring(7);
+
+        ArrayList<String> nomesPesquisa = leitor.carregarNomes(ARQUIVO_NOMES);
+
+        long tempoTotal = 0;
+
+        for (int i = 0; i < 5; i++) {
+            long inicio = System.nanoTime();
+
+            ArrayList<Reserva> lista = leitor.carregar(caminhoArquivo);
+
+            AVL avl = new AVL();
+
+            for (Reserva reserva : lista) {
+                avl.inserir(reserva);
+            }
+
+            ArrayList<ArrayList<Reserva>> resultados = new ArrayList<>();
+            for (String nome : nomesPesquisa) {
+                ArrayList<Reserva> resultado = avl.pesquisar(nome);
+                resultados.add(resultado);
+            }
+
+            gravador.gravarResultadoPesquisa(nomesPesquisa, resultados, nomeSaida);
+
+            long fim = System.nanoTime();
+            tempoTotal += (fim - inicio);
+        }
+
         double media = tempoTotal / 5.0 / 1_000_000.0;
         System.out.printf("  %-25s -> %.3f ms%n", nomeArquivo, media);
     }

@@ -1,10 +1,12 @@
-package model;
+package pesquisa;
 
-public class NoReserva {
+import model.Reserva;
+
+public class NoHashing {
     private Reserva reserva;
-    private NoReserva proximo;
+    private NoHashing proximo;
 
-    public NoReserva(Reserva reserva) {
+    public NoHashing(Reserva reserva) {
         this.reserva = reserva;
         this.proximo = null;
     }
@@ -17,11 +19,11 @@ public class NoReserva {
         this.reserva = reserva;
     }
 
-    public NoReserva getProximo() {
+    public NoHashing getProximo() {
         return proximo;
     }
 
-    public void setProximo(NoReserva proximo) {
+    public void setProximo(NoHashing proximo) {
         this.proximo = proximo;
     }
 }

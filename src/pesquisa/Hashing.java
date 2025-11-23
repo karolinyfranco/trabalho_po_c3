@@ -2,11 +2,10 @@ package pesquisa;
 
 import java.util.ArrayList;
 
-import model.NoReserva;
 import model.Reserva;
 
 public class Hashing {
-    private ArrayList<NoReserva>[] tabela;
+    private ArrayList<NoHashing>[] tabela;
     private int tamanho;
 
     public Hashing(int tamanho) {
@@ -30,7 +29,7 @@ public class Hashing {
 
     public void inserir(Reserva reserva) {
         int indice = hash(reserva.getNome());
-        tabela[indice].add(new NoReserva(reserva));
+        tabela[indice].add(new NoHashing(reserva));
     }
 
     public ArrayList<Reserva> pesquisar(String nome) {
@@ -38,7 +37,7 @@ public class Hashing {
         int indice = hash(nome);
 
         // Percorre a lista encadeada naquela posição da tabela
-        for (NoReserva no : tabela[indice]) {
+        for (NoHashing no : tabela[indice]) {
             if (no.getReserva().getNome().equalsIgnoreCase(nome)) {
                 resultado.add(no.getReserva());
             }
