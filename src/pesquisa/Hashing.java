@@ -23,8 +23,13 @@ public class Hashing {
     }
 
     private int hash(String nome) {
-        int hashCode = nome.toLowerCase().hashCode();
-        return Math.abs(hashCode) % tamanho;
+        char carac;
+        int i, soma = 0;
+        for (i = 0; i < nome.length(); i++){
+            carac = nome.charAt(i);
+            soma += Character.getNumericValue(carac);
+        }
+        return soma % tamanho;
     }
 
     public void inserir(Reserva reserva) {

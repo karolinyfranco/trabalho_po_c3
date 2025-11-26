@@ -18,6 +18,7 @@ public class Quicksort {
         int meio = (esq + dir) / 2;
         Reserva pivo = lista[meio];
 
+        // Move o pivô para o final para facilitar o particionamento
         trocar(lista, meio, dir);
 
         int i = esq - 1;
@@ -29,8 +30,9 @@ public class Quicksort {
             }
         }
 
+        // Coloca o pivô na sua posição final correta
         trocar(lista, i + 1, dir);
-        return i + 1;
+        return i + 1; // Retorna o índice do pivô
     }
 
     private void trocar(Reserva[] lista, int i, int j) {

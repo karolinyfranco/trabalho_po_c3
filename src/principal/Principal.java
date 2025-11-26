@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import model.Reserva;
 import ordenacao.*;
+import pesquisa.ABB;
 import pesquisa.AVL;
 import pesquisa.Hashing;
 import utils.*;
@@ -29,42 +30,39 @@ public class Principal {
     private static PrimoUtils primo = new PrimoUtils();
 
     public static void main(String[] args) throws IOException {
-        Heapsort heap = new Heapsort();
-        Quicksort quick = new Quicksort();
-        QuicksortInsercao quickInsercao = new QuicksortInsercao();
+        processarArquivos();
+    }
 
+    public static void processarArquivos() throws IOException {
         System.out.println("=".repeat(60));
         System.out.println("TRABALHO DE PESQUISA E ORDENAÇÃO");
         System.out.println("=".repeat(60));
 
-        // ETAPA 1: HeapSort
         System.out.println("\n[1/6] Executando HeapSort...");
         for (String arquivo : ARQUIVOS_ENTRADA) {
-            executarHeapSort(arquivo, heap);
+            executarHeapSort(arquivo);
         }
 
-        // ETAPA 2: QuickSort
         System.out.println("\n[2/6] Executando QuickSort...");
         for (String arquivo : ARQUIVOS_ENTRADA) {
-            executarQuickSort(arquivo, quick);
+            executarQuickSort(arquivo);
         }
 
-        // ETAPA 3: QuickSort com Inserção
         System.out.println("\n[3/6] Executando QuickSort com Inserção...");
         for (String arquivo : ARQUIVOS_ENTRADA) {
-            executarQuickSortInsercao(arquivo, quickInsercao);
+            executarQuickSortInsercao(arquivo);
         }
 
-        // ETAPA 4: ABB (a ser implementada)
-        System.out.println("\n[4/6] ABB - A IMPLEMENTAR");
+        System.out.println("\n[4/6] Executando ABB...");
+        for (String arquivo : ARQUIVOS_ENTRADA) {
+            executarABB(arquivo);
+        }
 
-        // ETAPA 5: AVL
         System.out.println("\n[5/6] Executando AVL...");
         for (String arquivo : ARQUIVOS_ENTRADA) {
             executarAVL(arquivo);
         }
 
-        // ETAPA 6: Hashing
         System.out.println("\n[6/6] Executando Hashing...");
         for (String arquivo : ARQUIVOS_ENTRADA) {
             executarHashing(arquivo);
@@ -75,17 +73,19 @@ public class Principal {
         System.out.println("=".repeat(60));
     }
 
-    public static void executarHeapSort(String caminhoArquivo, Heapsort heap) throws IOException {
+    public static void executarHeapSort(String caminhoArquivo) throws IOException {
         String nomeArquivo = leitor.extrairNomeArquivo(caminhoArquivo);
         String nomeSaida = "arquivos_saida/heap" + nomeArquivo.substring(7);
+        Heapsort heap = new Heapsort();
 
         long tempoTotal = 0;
 
+        // Executa 5 vezes para calcular a média e ter uma medição mais estável
         for (int i = 0; i < 5; i++) {
             long inicio = System.nanoTime();
 
             ArrayList<Reserva> lista = leitor.carregar(caminhoArquivo);
-            Reserva[] vetor = lista.toArray(new Reserva[0]);
+            Reserva[] vetor = lista.toArray(new Reserva[0]); // Converte ArrayList para Array para o algoritmo de ordenação
 
             heap.ordenar(vetor);
 
@@ -99,9 +99,10 @@ public class Principal {
         System.out.printf("  %-25s -> %.3f ms%n", nomeArquivo, media);
     }
 
-    public static void executarQuickSort(String caminhoArquivo, Quicksort quick) throws IOException {
+    public static void executarQuickSort(String caminhoArquivo) throws IOException {
         String nomeArquivo = leitor.extrairNomeArquivo(caminhoArquivo);
         String nomeSaida = "arquivos_saida/quick" + nomeArquivo.substring(7);
+        Quicksort quick = new Quicksort();
 
         long tempoTotal = 0;
 
@@ -122,9 +123,10 @@ public class Principal {
         System.out.printf("  %-25s -> %.3f ms%n", nomeArquivo, media);
     }
 
-    public static void executarQuickSortInsercao(String caminhoArquivo, QuicksortInsercao quickInsercao) throws IOException {
+    public static void executarQuickSortInsercao(String caminhoArquivo) throws IOException {
         String nomeArquivo = leitor.extrairNomeArquivo(caminhoArquivo);
         String nomeSaida = "arquivos_saida/QuickIns" + nomeArquivo.substring(7);
+        QuicksortInsercao quickInsercao = new QuicksortInsercao();
 
         long tempoTotal = 0;
 
@@ -145,6 +147,54 @@ public class Principal {
         System.out.printf("  %-25s -> %.3f ms%n", nomeArquivo, media);
     }
 
+    public static void executarABB(String caminhoArquivo) throws IOException {
+        String nomeArquivo = leitor.extrairNomeArquivo(caminhoArquivo);
+        String nomeSaida = "arquivos_saida/ABB" + nomeArquivo.substring(7);
+
+        ArrayList<String> nomesPesquisa = leitor.carregarNomes(ARQUIVO_NOMES);
+
+        long tempoTotal = 0;
+        boolean erroStack = false;
+
+        for (int i = 0; i < 5; i++) {
+            long inicio = System.nanoTime();
+
+            try {
+                ArrayList<Reserva> lista = leitor.carregar(caminhoArquivo);
+                ABB abb = new ABB();
+
+                for (Reserva r : lista) {
+                    abb.inserir(r);
+                }
+
+                abb.balancear();
+
+                ArrayList<ArrayList<Reserva>> resultados = new ArrayList<>();
+                for (String nome : nomesPesquisa) {
+                    resultados.add(abb.pesquisar(nome));
+                }
+
+                gravador.gravarResultadoPesquisa(nomesPesquisa, resultados, nomeSaida);
+
+            } catch (StackOverflowError e) {
+                if (!erroStack) {
+                    // Captura StackOverflow (comum em arquivos já ordenados ou inversos)
+                    System.err.println("[ABB] StackOverflow durante inserção ou pesquisa no arquivo: " + nomeArquivo);
+                    erroStack = true;
+                }
+            } catch (Exception e) {
+                System.err.println("[ABB] Erro inesperado no arquivo " + nomeArquivo);
+                e.printStackTrace();
+            }
+
+            long fim = System.nanoTime();
+            tempoTotal += (fim - inicio);
+        }
+
+        double media = tempoTotal / 5.0 / 1_000_000.0;
+        System.out.printf("  %-25s -> %.3f ms%n", nomeArquivo, media);
+    }
+
     public static void executarAVL(String caminhoArquivo) throws IOException {
         String nomeArquivo = leitor.extrairNomeArquivo(caminhoArquivo);
         String nomeSaida = "arquivos_saida/AVL" + nomeArquivo.substring(7);
@@ -160,6 +210,7 @@ public class Principal {
 
             AVL avl = new AVL();
 
+            // A inserção na AVL já garante o balanceamento automático
             for (Reserva reserva : lista) {
                 avl.inserir(reserva);
             }
@@ -193,6 +244,7 @@ public class Principal {
 
             ArrayList<Reserva> lista = leitor.carregar(caminhoArquivo);
 
+            // Calcula o tamanho ideal da tabela hash como o próximo primo após uma estimativa (fator de carga)
             int tamanhoTabela = primo.proximoPrimo(lista.size());
             Hashing hash = new Hashing(tamanhoTabela);
 

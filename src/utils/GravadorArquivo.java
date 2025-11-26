@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import model.Reserva;
 
 public class GravadorArquivo {
+    // Grava um array de objetos Reserva (resultado de uma ordenação)
     public void gravarArquivo(Reserva[] vetor, String nomeArquivo) throws IOException {
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(nomeArquivo))) {
             for (Reserva r : vetor) {
@@ -14,6 +15,7 @@ public class GravadorArquivo {
         }
     }
 
+    // Grava os resultados de múltiplas pesquisas (nome e lista de reservas)
     public void gravarResultadoPesquisa(ArrayList<String> nomes,
                                         ArrayList<ArrayList<Reserva>> resultados,
                                         String nomeArquivo) throws IOException {

@@ -20,7 +20,6 @@ public class NoAVL {
         this.altura = 1; // Nova folha tem altura 1
     }
 
-    // Getters e Setters
     public String getNome() {
         return nome;
     }

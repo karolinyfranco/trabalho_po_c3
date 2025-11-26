@@ -32,6 +32,7 @@ public class QuicksortInsercao {
         }
     }
 
+    // O método de particionamento é o mesmo do Quicksort padrão
     private int particionar(Reserva[] lista, int esq, int dir) {
         int meio = (esq + dir) / 2;
         Reserva pivo = lista[meio];
