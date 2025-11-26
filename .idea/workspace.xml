@@ -5,76 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c597c5af-a862-4f02-a637-7db7f0de1147" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pesquisa/NoABB.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/AVL10000alea.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/AVL10000inv.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/AVL10000ord.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/AVL1000alea.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/AVL1000inv.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/AVL1000ord.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/AVL50000alea.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/AVL50000inv.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/AVL50000ord.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/AVL5000alea.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/AVL5000inv.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/AVL5000ord.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/Hash10000alea.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/Hash10000inv.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/Hash10000ord.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/Hash1000alea.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/Hash1000inv.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/Hash1000ord.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/Hash50000alea.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/Hash50000inv.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/Hash50000ord.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/Hash5000alea.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/Hash5000inv.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/Hash5000ord.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/QuickIns10000alea.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/QuickIns10000inv.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/QuickIns10000ord.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/QuickIns1000alea.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/QuickIns1000inv.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/QuickIns1000ord.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/QuickIns50000alea.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/QuickIns50000inv.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/QuickIns50000ord.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/QuickIns5000alea.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/QuickIns5000inv.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/QuickIns5000ord.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/heap10000alea.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/heap10000inv.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/heap10000ord.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/heap1000alea.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/heap1000inv.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/heap1000ord.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/heap50000alea.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/heap50000inv.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/heap50000ord.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/heap5000alea.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/heap5000inv.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/heap5000ord.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/quick10000alea.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/quick10000inv.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/quick10000ord.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/quick1000alea.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/quick1000inv.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/quick1000ord.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/quick50000alea.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/quick50000inv.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/quick50000ord.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/quick5000alea.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/quick5000inv.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arquivos_saida/quick5000ord.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ordenacao/Quicksort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ordenacao/Quicksort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ordenacao/QuicksortInsercao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ordenacao/QuicksortInsercao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pesquisa/ABB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pesquisa/ABB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pesquisa/Hashing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pesquisa/Hashing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pesquisa/NoAVL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pesquisa/NoAVL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/principal/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/principal/Principal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/GravadorArquivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/GravadorArquivo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/LeitorArquivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/LeitorArquivo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pesquisa/AVL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pesquisa/AVL.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/PrimoUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/PrimoUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -110,7 +42,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/luana/Projects_Faesa/javaclinic_lpoo_c3",
+    "last_opened_file_path": "C:/Users/luana/Projects_Faesa/trabalho_po_c3",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",

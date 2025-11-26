@@ -17,7 +17,9 @@ public class AVL {
     }
 
     private int fatorBalanceamento(NoAVL no) {
-        return (no == null) ? 0 : altura(no.getEsquerda()) - altura(no.getDireita());
+        // FB > 1  -> Desbalanceamento a Direita
+        // FB < -1 -> Desbalanceamento a Esquerda
+        return (no == null) ? 0 : altura(no.getDireita()) - altura(no.getEsquerda());
     }
 
     private void atualizarAltura(NoAVL no) {
@@ -33,7 +35,6 @@ public class AVL {
         x.setDireita(y);
         y.setEsquerda(T2);
 
-
         atualizarAltura(y);
         atualizarAltura(x);
 
@@ -47,7 +48,6 @@ public class AVL {
         // Realiza a rotação
         y.setEsquerda(x);
         x.setDireita(T2);
-
 
         atualizarAltura(x);
         atualizarAltura(y);
@@ -74,39 +74,35 @@ public class AVL {
         } else {
             // Nomes iguais: adiciona a reserva à lista do nó existente
             no.getReservas().add(reserva);
-            // Não precisa rebalancear, apenas retorna o nó
             return no;
         }
 
         // Atualiza a altura do nó atual
         atualizarAltura(no);
 
-        // Obtém o fator de balanceamento
         int balanceamento = fatorBalanceamento(no);
 
-        // Caso Esquerda-Esquerda (LL)
-        if (balanceamento > 1 && reserva.getNome().compareToIgnoreCase(no.getEsquerda().getNome()) < 0) {
-            return rotacaoDireita(no);
-        }
-
-        // Caso Direita-Direita (RR)
-        if (balanceamento < -1 && reserva.getNome().compareToIgnoreCase(no.getDireita().getNome()) > 0) {
+        // Caso Direita-Direita (RR) - Desbalanceamento a Direita (FB > 1)
+        if (balanceamento > 1 && reserva.getNome().compareToIgnoreCase(no.getDireita().getNome()) > 0) {
             return rotacaoEsquerda(no);
         }
 
-        // Caso Esquerda-Direita (LR)
-        if (balanceamento > 1 && reserva.getNome().compareToIgnoreCase(no.getEsquerda().getNome()) > 0) {
-            no.setEsquerda(rotacaoEsquerda(no.getEsquerda()));
+        // Caso Esquerda-Esquerda (LL) - Desbalanceamento a Esquerda (FB < -1)
+        if (balanceamento < -1 && reserva.getNome().compareToIgnoreCase(no.getEsquerda().getNome()) < 0) {
             return rotacaoDireita(no);
         }
 
-        // Caso Direita-Esquerda (RL)
-        if (balanceamento < -1 && reserva.getNome().compareToIgnoreCase(no.getDireita().getNome()) < 0) {
+        // Caso Direita-Esquerda (RL) - Desbalanceamento a Direita (FB > 1)
+        if (balanceamento > 1 && reserva.getNome().compareToIgnoreCase(no.getDireita().getNome()) < 0) {
             no.setDireita(rotacaoDireita(no.getDireita()));
             return rotacaoEsquerda(no);
         }
 
-        // Retorna o nó (balanceado ou não)
+        // Caso Esquerda-Direita (LR) - Desbalanceamento a Esquerda (FB < -1)
+        if (balanceamento < -1 && reserva.getNome().compareToIgnoreCase(no.getEsquerda().getNome()) > 0) {
+            no.setEsquerda(rotacaoEsquerda(no.getEsquerda()));
+            return rotacaoDireita(no);
+        }
         return no;
     }
 

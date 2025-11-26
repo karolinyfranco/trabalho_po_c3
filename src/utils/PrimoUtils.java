@@ -3,8 +3,8 @@ package utils;
 public class PrimoUtils {
     // Retorna o próximo número primo maior ou igual a uma estimativa baseada em 'n'
     public int proximoPrimo(int n) {
-        // Usa um tamanho um pouco maior que o número de elementos (fator de carga ~0.75)
-        int num = (int) (n * 1.3);
+        // Usa um tamanho um pouco maior que o número de elementos (10% a mais)
+        int num = (int) (n * 1.1);
 
         while (!ehPrimo(num)) {
             num++;
@@ -12,7 +12,7 @@ public class PrimoUtils {
         return num;
     }
 
-    public boolean ehPrimo(int n) {
+    private boolean ehPrimo(int n) {
         if (n <= 1) {
             return false;
         }
